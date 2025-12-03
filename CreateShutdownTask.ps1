@@ -24,6 +24,15 @@ $Trigger = @(
     $(New-ScheduledTaskTrigger -Weekly -DaysOfWeek Saturday,Sunday -At "4:30 AM")
 )
 
+# This ensures we don't "synchronize across time zones" - we want to be warned at 11:30PM no mattter what the time zone:
+foreach ($trig in $Trigger)
+{
+    if($trig.StartBoundary.EndsWith("Z"))
+    {
+        # $trig.StartBoundary = $[DateTime]::Parse($trig.StartBoundary).ToString("yyyy-MM-ddTHH:mm:ss")
+        $trig.StartBoundary = $([DateTime]::Parse($trig.StartBoundary).ToString("yyyy-MM-ddTHH:mm:ss"))
+    }
+}
 
 
 # Define the principal (optional, but recommended for specific user context)
