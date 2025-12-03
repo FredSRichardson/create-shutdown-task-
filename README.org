@@ -15,3 +15,7 @@ To install the scripts, use the following commands in a PowerShell:
   powershell -ExecutionPolicy Bypass -File .\CreateShutdownTask.ps1
   powershell -ExecutionPolicy Bypass -File .\CreateWarningTask.ps1
 #+end_src
+
+NOTE: the waring event uses the =msg.exe= command which does not exist
+in some version of Windows like the Home editions.  You may have to
+download an altnernative and specify it by path.
