@@ -1,0 +1,10 @@
+* The scripts
+
+|------------------------+--------------------------------------------------------------------|
+| CreateShutdownTask.ps1 | Creates an event that shutdowns the computer                       |
+| CreateWarningTask.ps1  | Creates an event that issues a 10 minute warning prior to shutdown |
+|------------------------+--------------------------------------------------------------------|
+
+The scripts create a shutdown event that starts at 11:30PM on
+weekdays and 2:00AM on weekends and a warning event that runs 10
+minutes before each shutdown issuing a warning to the user.
