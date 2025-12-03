@@ -8,3 +8,10 @@
 The scripts create a shutdown event that starts at 11:30PM on
 weekdays and 2:00AM on weekends and a warning event that runs 10
 minutes before each shutdown issuing a warning to the user.
+
+To install the scripts, use the following commands in a PowerShell:
+
+#+begin_src bash
+  powershell -ExecutionPolicy Bypass -File .\CreateShutdownTask.ps1
+  powershell -ExecutionPolicy Bypass -File .\CreateWarningTask.ps1
+#+end_src
