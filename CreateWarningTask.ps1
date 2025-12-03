@@ -1,6 +1,6 @@
 # Define the action: What the scheduled task will execute
 # This example runs a PowerShell script located at C:\Scripts\MyScript.ps1
-$Action = New-ScheduledTaskAction -Execute "C:\Utilities\msg.exe" -Argument "* The system will shutdown in 10 minutes"
+$Action = New-ScheduledTaskAction -Execute "msg.exe" -Argument "* The system will shutdown in 10 minutes"
 
 # Define the trigger: When the scheduled task will run
 # This example sets a daily trigger at 9:00 AM
